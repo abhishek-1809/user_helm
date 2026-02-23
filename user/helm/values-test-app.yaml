@@ -1,0 +1,4 @@
+image:
+  repository: abhi297/test-app
+  tag: latest
+  pullPolicy: IfNotPresent
