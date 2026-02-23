@@ -1,0 +1,19 @@
+replicaCount: 1
+name: myapp
+image:
+  repository: abhi297/myapp
+  tag: v1.0
+  pullPolicy: IfNotPresent
+resources:
+  requests:
+    cpu: 256m
+    memory: 64Mi
+  limits:
+    cpu: 512m
+    memory: 128Mi
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 8080
+  nodePort: 30080
