@@ -19,7 +19,7 @@ jobs:
 
       - name: build Spring Boot app
         run: ./mvnw clean package -DskipTests
-        working-directory: ./user_helm/user
+        working-directory: user_helm/user
 
       - name: docker hub login
         uses: docker/login-action@v3
