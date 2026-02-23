@@ -12,7 +12,7 @@ jobs:
 
     env:
       IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/myapp:v1.0
-      
+
     steps:
       - name: check repo
         uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
         run: docker push ${{ env.IMAGE_NAME }}
 
       - name: run container
-        run: docker run -d -p 8080:8080 ${{ IMAGE_NAME }}
+        run: docker run -d -p 8080:8080 ${{ env.IMAGE_NAME }}
 
       - name: wait for app to start
         run: sleep 20
